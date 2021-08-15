@@ -67,6 +67,7 @@ if __name__ == "__main__":
     os.makedirs("out", exist_ok=True)
     index_file_path = "index.html"
     content_tag_id = "HEREISCONTENT"
+    ratio = (1080 / 1920)
     content_tag = index_html.find("div", {"id": content_tag_id})
     hti = Html2Image()
     for i, comment in enumerate(loop):
@@ -76,6 +77,6 @@ if __name__ == "__main__":
             f.write(index_html.decode(pretty_print=False, eventual_encoding="utf8"))
         fname = f'{i}.png'
         out_path = os.path.join("out", fname)
-        hti.screenshot(html_file=index_file_path , save_as=fname, size=(2500, 1000))
+        hti.screenshot(html_file=index_file_path , save_as=fname, size=(2700, 2700 * ratio))
         shutil.move(fname, out_path)
     os.remove(index_file_path)
