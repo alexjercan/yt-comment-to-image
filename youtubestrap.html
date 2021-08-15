@@ -1,4 +1,12 @@
 <head>
+	<style>
+		.scaled {
+			transform-origin: left top;
+			transform: scale(5);
+			padding: 2%;
+			background-color: white;
+		}
+	</style>
 	<style class="global_styles" nonce="SvBbHGuEUTGyDisDhQADdA">
 		body {
 			padding: 0;
@@ -76264,18 +76272,6 @@
 		<yt-visibility-monitor class="style-scope ytd-app" height-prescan="400" id="visibility-monitor"
 			track-window-scroll=""></yt-visibility-monitor>
 		<yt-history-manager class="style-scope ytd-app" id="historyManager"></yt-history-manager>
-		<div class="style-scope ytd-app" id="content">
-			<div class="style-scope ytd-app" id="masthead-container">
-				<ytd-masthead class="masthead-finish" desktop-mic-background="" desktop-searchbar-style="default"
-					id="masthead" logo-type="YOUTUBE_LOGO" role="banner" slot="masthead">
-					<!--css-build:shady-->
-					<iron-media-query class="style-scope ytd-masthead" query="max-width: 656px" style="display: none;">
-					</iron-media-query>
-					<div class="style-scope ytd-masthead" id="ticker"></div>
-					<div class="style-scope ytd-masthead" id="interstitial"></div>
-					<div id="HEREISCONTENT"></div>
-				</ytd-masthead>
-			</div>
-		</div>
+		<div class="scaled" id="HEREISCONTENT"></div>
 	</ytd-app>
 </body>

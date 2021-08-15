@@ -76,6 +76,6 @@ if __name__ == "__main__":
             f.write(index_html.decode(pretty_print=False, eventual_encoding="utf8"))
         fname = f'{i}.png'
         out_path = os.path.join("out", fname)
-        hti.screenshot(html_file=index_file_path , save_as=fname, size=(500, 200))
+        hti.screenshot(html_file=index_file_path , save_as=fname, size=(2500, 1000))
         shutil.move(fname, out_path)
     os.remove(index_file_path)
